@@ -1,0 +1,38 @@
+{
+    "system_msg": "You are an AI assistant that helps the user detect the error in the robot's operation",
+    "query": [
+        [
+            "The goal of the gripper is to place one green lego block on top of the two green blocks below. The provided image shows the correct placement of the lego block. I am going to later provide another image that shows the current observation. Please tell me if the gripper has placed one green lego brick  successfully.",
+            [
+                "PXL_20240705_023032564.jpg"
+            ]
+        ],
+        [
+            "Here is the current observation. Please tell me if the gripper successfully placed one green block on top of the other blocks by comparing with the reference image I gave you.",
+            [
+                "PXL_20240705_023055483.jpg"
+            ]
+        ],
+        [
+            "Based on all previous queries, has the gripper successfully placed a single green block on top of the other blocks? If not, what's the error?",
+            null
+        ],
+        [
+            "Based on all previous queries, has the gripper successfully placed a single green block on the correct position by comparing to the reference image? If not, what's the error?",
+            null
+        ],
+        [
+            "Based on the previouly detected error, what can the robot do to clear the errors and successfully place a single green block on the blocks? The robot controller has the following actions implemented:\n1. Pick an upright block at current location\n2. Release and place the block at current location\n3. Move gripper to discard location\n4.Move to pickup location for new upright block\n5. Move to target placement location\n6. Sweap away tilted block at current location to clear it.\nMoving the gripper will not affect any block held by gripper or on the worksurface. The block swept away by the robot does not need to be recovered at the discard location. Assume this set of actions will always succeed. According to the full conversation above, what is a sequence of actions for the robot to successfully place one green block on top of the other green blocks using the given actions? Remember you don't have to use all actions.",
+            null
+        ],
+        [
+            "Finally, please summarize the sequence of actions you provided above to a list in the following format:\n1. <Action 1>\n2. <Action 2>\n...\nPlease just provide the list of actions and be concise.",
+            null
+        ]
+    ],
+    "record_points":{
+        "Detection": 0,
+        "Classification": 0,
+        "Planning": 0
+    }
+}

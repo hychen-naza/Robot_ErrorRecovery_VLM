@@ -1,0 +1,19 @@
+{
+    "system_msg": "You are an AI assistant that helps the user detect the error in the robot's operation",
+    "query": [
+    	[
+    	"The goal of the gripper is to pick one green lego block shown in this image, which is the correct reference image. Now I am going to provide another image, which is the current observation. Please tell me if the gripper picks up one green lego brick successfully.", ["ref.jpg"]],
+        ["Here is the current observation. Please tell me if the gripper successfully pick up green block by comparing with the reference image I gave you.", ["obs.jpg"]],
+        ["Here is the current observation. Please tell me if only one green block is picked up by the gripper? Remeber in the reference image, the gripper holds one block and every block has same shape and size.", ["obs.jpg"]],
+        ["Here is the current observation. Please tell me if the lego block being picked up by the gripper is color green, as shown in the reference image?", ["obs.jpg"]],
+        ["Based on all previous queries, is the gripper successfully pick up single green block? If not, what's the error?", null],
+        [
+        "Based on the previouly detected error, what can the robot do to clear the errors and successfully pick a single green block? The robot controller has the following actions implemented:\n1. Pick an upright block at current location\n2. Release and place the block at current location\n3. Move gripper to discard location\n4.Move to pickup location for new upright block\n5. Move to target placement location\n6. Sweap away tilted block at current location to clear it.\nMoving the gripper will not affect any block held by gripper or on the worksurface. The block swept away by the robot does not need to be recovered at the discard location. Assume this set of actions will always succeed. According to the full conversation and the errors detected above, what actions the robot should use to successfully recovery from the failure and finish the pick up task? Remember you don't have to use all actions.",
+            null
+        ],
+        [
+            "Finally, please summarize the sequence of actions you provided above to a list in the following format:\n1. <Action 1>\n2. <Action 2>\n...\nPlease just provide the list of actions and be concise.",
+            null
+        ]
+    ]
+}
