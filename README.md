@@ -4,9 +4,9 @@ Instructions will come soon.
 
 
 ## Usage
-The motion-level failure recovery is done in real-world robots.
+The motion-level failure recovery is done in real-world robots *Rotation*, *Target Reach*, *Grasping* and *Lego Assembly*.
 
-We provide 8*3 different failure cases to test out the task level failure recovery.
+The task level failure recovery contains 8*3 different failure cases for evaluting our method under ./task_level/experiments/.
 
 
 ## Contact
